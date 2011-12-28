@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.xtext.org/lrm/Multiplosdestinos" 
+       class = "org.xtext.lrm.multiplosdestinos.MultiplosdestinosPackage"
+       genModel = "org/xtext/lrm/Multiplosdestinos.genmodel" /> 
+	
+  </extension>
+
+
+
+
+
+</plugin>
