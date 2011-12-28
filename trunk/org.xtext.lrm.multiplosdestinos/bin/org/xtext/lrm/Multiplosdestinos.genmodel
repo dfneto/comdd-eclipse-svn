@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.lrm.multiplosdestinos/src-gen"
+    editDirectory="/org.xtext.lrm.multiplosdestinos.edit/src" editorDirectory="/org.xtext.lrm.multiplosdestinos.editor/src"
+    modelPluginID="org.xtext.lrm.multiplosdestinos" forceOverwrite="true" modelName="Multiplosdestinos"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.xtext.lrm.multiplosdestinos.edit"
+    editorPluginID="org.xtext.lrm.multiplosdestinos.editor">
+  <genPackages prefix="Multiplosdestinos" basePackage="org.xtext.lrm" disposableProviderFactory="true"
+      ecorePackage="Multiplosdestinos.ecore#/">
+    <genClasses ecoreClass="Multiplosdestinos.ecore#//ModeloRobo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Multiplosdestinos.ecore#//ModeloRobo/plataforma"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//ModeloRobo/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Multiplosdestinos.ecore#//ModeloRobo/cabecalho"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Multiplosdestinos.ecore#//ModeloRobo/pacote"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Multiplosdestinos.ecore#//ModeloRobo/sensor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Multiplosdestinos.ecore#//ModeloRobo/main"/>
+    </genClasses>
+    <genClasses ecoreClass="Multiplosdestinos.ecore#//Plataforma"/>
+    <genClasses ecoreClass="Multiplosdestinos.ecore#//nomeDaPlataforma">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//nomeDaPlataforma/plat"/>
+    </genClasses>
+    <genClasses ecoreClass="Multiplosdestinos.ecore#//Cabecalho">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//Cabecalho/itensCabecalho"/>
+    </genClasses>
+    <genClasses ecoreClass="Multiplosdestinos.ecore#//Pacote">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//Pacote/tipo"/>
+    </genClasses>
+    <genClasses ecoreClass="Multiplosdestinos.ecore#//Sensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//Sensor/tipoSensor"/>
+    </genClasses>
+    <genClasses ecoreClass="Multiplosdestinos.ecore#//Main"/>
+    <genClasses ecoreClass="Multiplosdestinos.ecore#//loop">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Multiplosdestinos.ecore#//loop/iniSensor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//loop/w"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Multiplosdestinos.ecore#//loop/en"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Multiplosdestinos.ecore#//loop/proc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Multiplosdestinos.ecore#//loop/comp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Multiplosdestinos.ecore#//loop/ac"/>
+    </genClasses>
+    <genClasses ecoreClass="Multiplosdestinos.ecore#//inicializacaoSensor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//inicializacaoSensor/gpsLigar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//inicializacaoSensor/bussolaLigar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//inicializacaoSensor/cameraLigar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//inicializacaoSensor/carregarListaCoordenadas"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//inicializacaoSensor/inicializarPlayer"/>
+    </genClasses>
+    <genClasses ecoreClass="Multiplosdestinos.ecore#//entrada">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//entrada/gpsLer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//entrada/bussolaLer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//entrada/cameraLer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//entrada/receberCoordenada"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//entrada/carregarListaCoordenadas"/>
+    </genClasses>
+    <genClasses ecoreClass="Multiplosdestinos.ecore#//processamento">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//processamento/processaInfo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//processamento/processaImagem"/>
+    </genClasses>
+    <genClasses ecoreClass="Multiplosdestinos.ecore#//acao"/>
+    <genClasses ecoreClass="Multiplosdestinos.ecore#//comportamento">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//comportamento/defineRegra"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//comportamento/defineRegraSeguir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//comportamento/defineRegraNaoBater"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//comportamento/defineRegraSeguirMultiplasCoordenadas"/>
+    </genClasses>
+    <genClasses ecoreClass="Multiplosdestinos.ecore#//andar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Multiplosdestinos.ecore#//andar/andar"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

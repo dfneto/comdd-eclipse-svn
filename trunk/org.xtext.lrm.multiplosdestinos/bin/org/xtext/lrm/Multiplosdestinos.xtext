@@ -1,0 +1,134 @@
+grammar org.xtext.lrm.Multiplosdestinos with org.eclipse.xtext.common.Terminals
+
+generate multiplosdestinos "http://www.xtext.org/lrm/Multiplosdestinos"
+
+
+ModeloRobo:
+	(plataforma+=Plataforma)
+	'robo' name=ID 
+	(cabecalho+=Cabecalho)* 
+	(pacote+=Pacote)*
+	(sensor+=Sensor)* 
+	(main+=Main)  
+	;
+	
+Plataforma: 'plataforma'  nomeDaPlataforma ;
+
+nomeDaPlataforma
+:	 plat=( 'pionner'  
+	      | 'srv'  
+	      | 'golfe' )
+	;	
+
+Cabecalho:
+	'adicionar' itensCabecalho=( 'defines' 	| 'includes' )
+	;
+	
+Pacote: 
+	'importar pacote' tipo=('player;'  | 'localizacao;')
+	;
+
+Sensor:
+	'criarSensor' tipoSensor=TipoSensor;
+
+TipoSensor 
+	:	('gps' | 'bussola' | 'camera' ) 
+	;	
+
+Main: 'int main()' '{' loop '}'
+	;
+
+
+loop: 
+	(iniSensor+=inicializacaoSensor)*	
+	w+=while
+		(en+=entrada | proc+=processamento | comp+=comportamento | ac+=acao)*
+	'}' 
+	;
+
+while:
+     'while' '(true)' '{' 
+     ;
+ 
+inicializacaoSensor : 
+			//(WS)*
+			( gpsLigar='gps.ligar();' 		 
+			| bussolaLigar='bussola.ligar();' 		
+			| cameraLigar='camera.ligar();'		
+			| carregarListaCoordenadas='carregarListaCoordenadas();'  
+			| inicializarPlayer='inicializarPlayer();'   	
+			)
+			;
+
+
+//*******************************************/
+//***MAIN->ENTRADA**************************/
+//*****************************************/
+entrada:
+		( gpsLer='gps.ler();' 
+		| bussolaLer='bussola.ler();' 
+		| cameraLer='camera.ler();' 
+		| receberCoordenada='receberCoordenada();' 
+		| carregarListaCoordenadas='carregarListaCoordenadas();'
+		)
+		;
+
+
+//*******************************************/
+//***MAIN->PROCESSAMENTO********************/
+//*****************************************/
+processamento :	
+		( processaInfo='processaInfo();' 
+		| processaImagem='processaImagem();' 
+		)	
+		
+	;
+
+
+//*******************************************/
+//***MAIN->COMPORTAMENTO********************/
+//*****************************************/
+
+acao:
+	andar
+	;
+	
+comportamento :	
+		( defineRegra='defineRegra();'
+		| defineRegraSeguir='defineRegraSeguir();' 
+		| defineRegraNaoBater='defineRegraNaoBater();'  
+		| defineRegraSeguirMultiplasCoordenadas='defineRegraSeguirMultiplasCoordenadas();' 
+		)		
+	;
+	
+	
+//*******************************************/
+//***MAIN->ACAO*****************************/
+//*****************************************/
+
+andar	:	andar='andar();' 
+	;
+
+/*ID: 'a'..'z' + ;
+WS: (' ' |'\n' |'\r' | '\t' )+ {skip();} ; // ignore whitespace
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
