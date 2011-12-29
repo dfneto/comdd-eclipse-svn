@@ -25,17 +25,19 @@ int main() {
     carregarListaCoordenadas();
     inicializarPlayer();
     
+    // Define que robo ira seguir um conjungo de coordenadas
+    defineRegraSeguirMultiplasCoordenadas();
+    
     // Loop
     while(true) {
         // Le os dados atuais
         gps.ler();
         bussola.ler();
         
-        // Processa informações
+        // Processa informacoes
         processaInfo();
         receberCoordenada();
         
         andar();
-        
     }
 }
