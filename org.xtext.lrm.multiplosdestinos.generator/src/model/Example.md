@@ -25,6 +25,6 @@ int main() {
 
 		defineRegraSeguirMultiplasCoordenadas();
 
-		andar();
+		andar();o
 	}
 }
