@@ -27,6 +27,15 @@ int main() {
     
     // Loop
     while(true) {
-        //Falta fazer o funcioanamento de leitura das coordenadas
+        // Le os dados atuais
+        gps.ler();
+        bussola.ler();
+        
+        // Processa informações
+        processaInfo();
+        receberCoordenada();
+        
+        andar();
+        
     }
 }
