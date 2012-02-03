@@ -1,5 +1,5 @@
 plataforma pionner
-robo david
+robo USP
 
 adicionar includes
 adicionar defines
@@ -11,8 +11,6 @@ criarSensor gps
 criarSensor bussola
 
 int main() {
-	gps.ligar();
-	bussola.ligar();
 	carregarListaCoordenadas();
 	inicializarPlayer();
 	while(true) {
