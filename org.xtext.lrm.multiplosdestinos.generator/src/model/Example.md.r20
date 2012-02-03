@@ -1,0 +1,26 @@
+plataforma pionner
+robo USP
+
+adicionar includes
+adicionar defines
+
+importar pacote player;
+importar pacote localizacao;
+
+criarSensor gps
+criarSensor bussola
+
+int main() {
+	gps.ligar();
+	bussola.ligar();
+	carregarListaCoordenadas();
+	inicializarPlayer();
+	while(true) {
+		bussola.ler();
+		gps.ler();
+		receberCoordenada();
+		processaInfo();
+		defineRegraSeguirMultiplasCoordenadas();
+		andar();
+		}
+}
